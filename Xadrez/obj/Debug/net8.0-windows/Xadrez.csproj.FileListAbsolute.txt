@@ -1,0 +1,14 @@
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\Xadrez.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\Xadrez.AssemblyInfoInputs.cache
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\Xadrez.AssemblyInfo.cs
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\Xadrez.csproj.CoreCompileInputs.cache
+C:\Users\pe778\OneDrive\Documentos\Xadrez\bin\Debug\net8.0-windows\Xadrez.exe
+C:\Users\pe778\OneDrive\Documentos\Xadrez\bin\Debug\net8.0-windows\Xadrez.deps.json
+C:\Users\pe778\OneDrive\Documentos\Xadrez\bin\Debug\net8.0-windows\Xadrez.runtimeconfig.json
+C:\Users\pe778\OneDrive\Documentos\Xadrez\bin\Debug\net8.0-windows\Xadrez.dll
+C:\Users\pe778\OneDrive\Documentos\Xadrez\bin\Debug\net8.0-windows\Xadrez.pdb
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\Xadrez.dll
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\refint\Xadrez.dll
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\Xadrez.pdb
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\Xadrez.genruntimeconfig.cache
+C:\Users\pe778\OneDrive\Documentos\Xadrez\obj\Debug\net8.0-windows\ref\Xadrez.dll
