@@ -21,7 +21,7 @@ partial class Form1
         this.components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(850, 850);
-        this.Text = "xadrez";
+        this.Text = "Xadrez";
 
         for (int x = 0; x < GridSize; x++)
         {
@@ -42,7 +42,7 @@ partial class Form1
 
         try
         {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Rei branco.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", "Rei_branco.png");
             rei.Image = Image.FromFile(path);
         }
         catch (Exception ex)
@@ -60,7 +60,7 @@ partial class Form1
 
         try
         {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Rainha branco.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", "Rainha_branco.png");
             rainha.Image = Image.FromFile(path);
         }
         catch (Exception ex)
@@ -78,7 +78,7 @@ partial class Form1
 
         try
         {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Torre branco.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", "Torre_branco.png");
             torre.Image = Image.FromFile(path);
         }
         catch (Exception ex)
@@ -96,7 +96,7 @@ partial class Form1
 
         try
         {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Cavalo branco.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", "Cavalo_branco.png");
             cavalo.Image = Image.FromFile(path);
         }
         catch (Exception ex)
@@ -114,7 +114,7 @@ partial class Form1
 
         try
         {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Bispo branco.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", "Bispo_branco.png");
             bispo.Image = Image.FromFile(path);
         }
         catch (Exception ex)
@@ -132,7 +132,7 @@ partial class Form1
 
         try
         {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Peão branco.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", "Peao_branco.png");
             peao.Image = Image.FromFile(path);
         }
         catch (Exception ex)
