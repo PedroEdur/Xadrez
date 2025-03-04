@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\20221170150060\\Documents\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj": {}
+    "C:\\Users\\pe778\\OneDrive\\Documentos\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj": {}
   },
   "projects": {
-    "D:\\Users\\20221170150060\\Documents\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj": {
+    "C:\\Users\\pe778\\OneDrive\\Documentos\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\20221170150060\\Documents\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj",
+        "projectUniqueName": "C:\\Users\\pe778\\OneDrive\\Documentos\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj",
         "projectName": "Xadrez",
-        "projectPath": "D:\\Users\\20221170150060\\Documents\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj",
-        "packagesPath": "D:\\Users\\20221170150060\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\20221170150060\\Documents\\GitHub\\Xadrez\\Xadrez\\obj\\",
+        "projectPath": "C:\\Users\\pe778\\OneDrive\\Documentos\\GitHub\\Xadrez\\Xadrez\\Xadrez.csproj",
+        "packagesPath": "C:\\Users\\pe778\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pe778\\OneDrive\\Documentos\\GitHub\\Xadrez\\Xadrez\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "D:\\Users\\20221170150060\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\pe778\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -56,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

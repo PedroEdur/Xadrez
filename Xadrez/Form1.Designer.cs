@@ -1,8 +1,18 @@
-﻿namespace Xadrez;
+﻿using System;
+using System.Runtime.CompilerServices;
+namespace Xadrez;
 
 partial class Form1
 {
-    private Random random = new Random();
+    /// <summary>
+    ///  Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    ///  Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
     protected override void Dispose(bool disposing)
     {
         if (disposing && (components != null))
@@ -10,137 +20,119 @@ partial class Form1
             components.Dispose();
         }
         base.Dispose(disposing);
+        
     }
 
-    private System.ComponentModel.IContainer components = null;
-    private const int GridSize = 8;
-    private Button[,] grid = new Button[GridSize, GridSize];
+    #region Windows Form Designer generated code
 
+    /// <summary>
+    ///  Required method for Designer support
+    /// </summary>
     private void InitializeComponent()
     {
         this.components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(850, 850);
+        this.ClientSize = new System.Drawing.Size(500, 500);
         this.Text = "Xadrez";
 
-        for (int x = 0; x < GridSize; x++)
-        {
-            for (int y = 0; y < GridSize; y++)
-            {
-                Button botao = new Button();
-                botao.Size = new Size(50, 50);
-                botao.Location = new Point(50 * x, 50 * y);
-                grid[x, y] = botao;
-                this.Controls.Add(botao);
-            }
-        }
-
-        PictureBox rei = new PictureBox();
-        rei.Location = new Point(50, 50);
-        rei.Size = new Size(50, 50);
-        rei.SizeMode = PictureBoxSizeMode.StretchImage;
-
-        try
-        {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Rei_branco.png");
-            rei.Image = Image.FromFile(path);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-        }
-
-        this.Controls.Add(rei);
-        rei.BringToFront();
-
-        PictureBox rainha = new PictureBox();
-        rainha.Location = new Point(10, 10);
-        rainha.Size = new Size(50, 50);
-        rainha.SizeMode = PictureBoxSizeMode.StretchImage;
-
-        try
-        {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Rainha_branco.png");
-            rainha.Image = Image.FromFile(path);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-        }
-
-        this.Controls.Add(rainha);
-        rainha.BringToFront();
-
-        PictureBox torre = new PictureBox();
-        torre.Location = new Point(0, 0);
-        torre.Size = new Size(50, 50);
-        torre.SizeMode = PictureBoxSizeMode.StretchImage;
-
-        try
-        {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Torre_branco.png");
-            torre.Image = Image.FromFile(path);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-        }
-
-        this.Controls.Add(torre);
-        torre.BringToFront();
-
-        PictureBox cavalo = new PictureBox();
-        cavalo.Location = new Point(100, 100);
-        cavalo.Size = new Size(50, 50);
-        cavalo.SizeMode = PictureBoxSizeMode.StretchImage;
-
-        try
-        {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Cavalo_branco.png");
-            cavalo.Image = Image.FromFile(path);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-        }
-
-        this.Controls.Add(cavalo);
-        cavalo.BringToFront();
-
-        PictureBox bispo = new PictureBox();
-        bispo.Location = new Point(40, 50);
-        bispo.Size = new Size(50, 50);
-        bispo.SizeMode = PictureBoxSizeMode.StretchImage;
-
-        try
-        {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Bispo_branco.png");
-            bispo.Image = Image.FromFile(path);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-        }
-
-        this.Controls.Add(bispo);
-         bispo.BringToFront();
-
-        PictureBox peao = new PictureBox();
-        peao.Location = new Point(50, 50);
-        peao.Size = new Size(50, 50);
-        peao.SizeMode = PictureBoxSizeMode.StretchImage;
-
-        try
-        {
-            string path = Path.Combine(Application.StartupPath, "imagens", "Peao_branco.png");
-            peao.Image = Image.FromFile(path);
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-        }
-
-        this.Controls.Add(peao);
-        peao.BringToFront();
+        
+        InicializarTabuleiro();
+              
     }
+
+    public void InicializarTabuleiro()
+    {
+      
+                for(int X = 0; X < 8; X ++){
+                for(int Y = 0; Y < 8; Y++){
+                        int i = X; int j = Y;
+                        if (i % 2 == 0 ^ j % 2 == 0){
+                                tabuleiro[i, j] = new CasaVazia( i*50, j*50, "casaVaziacinza.png", Enumcor.vazio);
+                                this.Controls.Add(tabuleiro[i,j].pictureBox);
+                                tabuleiro[i,j].pictureBox.BringToFront();
+                                tabuleiro[i,j].pictureBox.Click += (sender,args) => {cliqueNoTabuleiro(tabuleiro[i,j]);};
+                        }
+                        else{
+                                tabuleiro[i, j] = new CasaVazia( i*50, j*50, "casaVaziaazul.png", Enumcor.vazio);
+                                this.Controls.Add(tabuleiro[i,j].pictureBox);
+                                tabuleiro[i,j].pictureBox.BringToFront();
+                                tabuleiro[i,j].pictureBox.Click += (sender,args) => {cliqueNoTabuleiro(tabuleiro[i,j]);};
+                        }
+                }
+        }
+           
+        
+
+        Rei reiBranco = new Rei(200,0,"reiBranco.png", Enumcor.Branco);
+        criarpeça(reiBranco);
+
+        Rei reiPreto = new Rei(200,350,"reiPreto.png", Enumcor.Preto);
+        criarpeça(reiPreto);
+
+        Rainha rainhaBranca = new Rainha(150, 0, "rainhaBranca.png", Enumcor.Branco);
+        criarpeça(rainhaBranca);
+
+        Rainha rainhaPreta = new Rainha(150, 350, "rainhaPreta.png", Enumcor.Preto);
+        criarpeça(rainhaPreta);
+
+        Torre torreBranca = new Torre(0,0, "torreBranca.png", Enumcor.Branco);
+        criarpeça(torreBranca);
+        Torre torreBranca1 = new Torre(350,0, "torreBranca.png", Enumcor.Branco);
+        criarpeça(torreBranca1);
+
+
+        Torre torrePreta = new Torre(0, 350, "torrePreta.png", Enumcor.Preto);
+        criarpeça(torrePreta);
+        Torre torrePreta1 = new Torre(350, 350, "torrePreta.png", Enumcor.Preto);
+        criarpeça(torrePreta1);
+
+
+        Bispo bispoBranco = new Bispo(100, 0, "bispoBranco.png", Enumcor.Branco);
+        criarpeça(bispoBranco);
+        Bispo bispoBranco1 = new Bispo(250, 0, "bispoBranco.png", Enumcor.Branco);
+        criarpeça(bispoBranco1);
+
+
+        Bispo bispoPreto = new Bispo(100, 350, "bispoPreto.png", Enumcor.Preto);
+
+        criarpeça(bispoPreto);
+        Bispo bispoPreto1 = new Bispo(250, 350, "bispoPreto.png", Enumcor.Preto);
+        criarpeça(bispoPreto1);
+
+       
+        Cavalo cavaloBranco = new Cavalo(50, 0, "cavaloBranco.png", Enumcor.Branco);
+        criarpeça(cavaloBranco);
+        Cavalo cavaloBranco1 = new Cavalo(300, 0, "cavaloBranco.png", Enumcor.Branco);
+        criarpeça(cavaloBranco1);
+
+        Cavalo cavaloPreto = new Cavalo(50, 350, "cavaloPreto.png", Enumcor.Preto);
+
+        criarpeça(cavaloPreto);
+        Cavalo cavaloPreto1 = new Cavalo(300, 350, "cavaloPreto.png", Enumcor.Preto);
+        criarpeça(cavaloPreto1);
+        
+    for (int j = 0; j < 8; j++)
+    {
+        Peao peaoBranco = new Peao(j * 50, 50, "peaoBranco.png", Enumcor.Branco);
+        criarpeça(peaoBranco);
+    }
+    
+    for (int j = 0; j < 8; j++)
+    {
+        Peao peaoPreto = new Peao(j * 50, 300, "peaoPreto.png", Enumcor.Preto);
+        criarpeça(peaoPreto);
+    }
+    
+    }
+    public void criarpeça(Peça peca)
+    {
+        tabuleiro[peca.X, peca.Y] = peca;
+        this.Controls.Add(peca.pictureBox);
+        peca.pictureBox.BringToFront();
+        peca.pictureBox.Click += (sender, args) => 
+        {
+            cliqueNoTabuleiro(peca);
+        };
+    }
+    #endregion
 }
